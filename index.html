@@ -31,7 +31,7 @@
     padding-top: 30px; /* Adjusted padding for moving text upwards */
   }
   
-  .license-link, .downloads-link {
+  .license-link, .downloads-link, .support-link {
     text-decoration: none; /* Remove underline */
     color: white; /* Text color */
     font-size: 18px; /* Font size */
@@ -52,8 +52,13 @@
     left: 500px; /* Adjusted position closer to License */
     transform: translateX(-50%);
   }
+
+  .support-link {
+    right: 300px; /* Adjusted position to move inward */
+    transform: translateX(50%);
+  }
   
-  .license-link:hover, .downloads-link:hover {
+  .license-link:hover, .downloads-link:hover, .support-link:hover {
     text-decoration: underline; /* Underline on hover */
   }
   
@@ -86,6 +91,7 @@
   <div class="top-row">
     <a href="https://opensource.org/licenses/GPL" class="license-link" target="_blank">License</a>
     <a href="download.html" class="downloads-link" target="_blank">Downloads</a>
+    <a href="https://form.jotform.com/241912762050046" class="support-link" target="_blank">Support</a>
   </div>
   <div class="sdk-text">Evoke SDK</div>
 </body>
