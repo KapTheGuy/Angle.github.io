@@ -12,7 +12,7 @@
     background: linear-gradient(135deg, #c90c43, #fbb03b);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start of the flex container */
+    align-items: center; /* Align items to the center of the flex container */
     justify-content: flex-start; /* Align content to the top of the viewport */
     color: white;
     font-family: Arial, sans-serif;
@@ -22,76 +22,70 @@
   .top-row {
     position: relative;
     width: 100%;
-    height: 135px; /* Reduced height by a quarter */
+    height: 135px; /* Adjust height as necessary */
     background: linear-gradient(to right, #000000, #888888);
     display: flex;
-    justify-content: flex-start; /* Align content to the start of the flex container */
+    justify-content: space-around; /* Distribute space evenly around items */
     align-items: center; /* Center items vertically */
-    padding-left: 50px; /* Increased padding for moving text inwards */
-    padding-top: 30px; /* Adjusted padding for moving text upwards */
+    padding: 0 10px; /* Add padding for small screens */
   }
-  
-  .license-link, .downloads-link, .support-link {
+
+  .link {
     text-decoration: none; /* Remove underline */
     color: white; /* Text color */
     font-size: 18px; /* Font size */
     font-weight: lighter; /* Lighter font weight */
     cursor: pointer; /* Cursor style on hover */
     opacity: 1; /* Initial opacity */
-    position: absolute;
-    top: 130px; /* Position of the link */
     font-smooth: always; /* Ensure smooth font rendering */
   }
   
-  .license-link {
-    left: 150px; /* Adjusted position closer to Downloads */
-    transform: translateX(-50%);
-  }
-
-  .downloads-link {
-    left: 250px; /* Adjusted position closer to License */
-    transform: translateX(-50%);
-  }
-
-  .support-link {
-    right: 300px; /* Adjusted position to move inward */
-    transform: translateX(50%);
-  }
-  
-  .license-link:hover, .downloads-link:hover, .support-link:hover {
+  .link:hover {
     text-decoration: underline; /* Underline on hover */
   }
   
   .sdk-text {
-    font-size: 72px; /* Reduced font size */
+    font-size: 72px; /* Adjust font size */
     font-weight: bold;
     margin-top: 20px; /* Adjust spacing from top row */
-    position: absolute;
-    top: 80px; /* Adjusted position to move "Evoke SDK" down */
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
     opacity: 0;
     animation: slideSDK 2s forwards; /* Animation duration and fill mode */
     font-smooth: always; /* Ensure smooth font rendering */
   }
-  
+
   @keyframes slideSDK {
     0% {
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateY(-50%);
       opacity: 0;
     }
     100% {
-      transform: translateX(-50%) translateY(-20%); /* Adjusted to end a bit higher */
+      transform: translateY(0%);
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sdk-text {
+      font-size: 36px; /* Smaller font size for mobile */
+    }
+    
+    .link {
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+    
+    .top-row {
+      height: 90px; /* Reduce height for mobile */
+      padding: 0 5px; /* Reduce padding for mobile */
     }
   }
 </style>
 </head>
 <body>
   <div class="top-row">
-    <a href="https://opensource.org/licenses/GPL" class="license-link" target="_blank">License</a>
-    <a href="download.html" class="downloads-link" target="_blank">Downloads</a>
-    <a href="https://form.jotform.com/241912762050046" class="support-link" target="_blank">Support</a>
+    <a href="https://opensource.org/licenses/GPL" class="link" target="_blank">License</a>
+    <a href="download.html" class="link" target="_blank">Downloads</a>
+    <a href="https://form.jotform.com/241912762050046" class="link" target="_blank">Support</a>
   </div>
   <div class="sdk-text">Evoke SDK</div>
 </body>
