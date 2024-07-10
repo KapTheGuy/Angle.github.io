@@ -86,9 +86,52 @@
                 padding: 6px 10px;
             }
         }
+
+        /* Portrait mode notification */
+        .rotate-notification {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            z-index: 9999;
+        }
+
+        .rotate-notification p {
+            margin-bottom: 20px;
+        }
+
+        .continue-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .continue-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
+    <div class="rotate-notification" id="rotateNotification">
+        <p>Please rotate your device to landscape mode for the best experience.</p>
+        <a href="#" class="continue-btn" id="continueBtn">Continue</a>
+    </div>
+
     <h1>Evoke SDK Downloads</h1>
     <label>
         <input type="checkbox" id="show-unstable"> Show unstable versions for beta releases and snapshots
@@ -214,6 +257,29 @@
                 unstableRows.forEach(row => {
                     row.style.display = showUnstableCheckbox.checked ? 'table-row' : 'none';
                 });
+            });
+
+            // Device orientation check
+            const rotateNotification = document.getElementById('rotateNotification');
+            const continueBtn = document.getElementById('continueBtn');
+
+            function checkOrientation() {
+                if (window.innerHeight > window.innerWidth) {
+                    // Portrait mode detected
+                    rotateNotification.style.display = 'flex';
+                } else {
+                    // Landscape mode or wider
+                    rotateNotification.style.display = 'none';
+                }
+            }
+
+            checkOrientation(); // Initial check
+
+            window.addEventListener('resize', checkOrientation);
+
+            continueBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                rotateNotification.style.display = 'none';
             });
         });
     </script>
