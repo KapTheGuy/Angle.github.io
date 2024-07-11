@@ -13,6 +13,8 @@
     color: white;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
   
   .top-row {
@@ -24,6 +26,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 0 10px;
+    flex-shrink: 0; /* Ensure it doesn't shrink */
   }
 
   .link {
@@ -33,7 +36,6 @@
     font-weight: lighter;
     cursor: pointer;
     opacity: 1;
-    font-smooth: always;
   }
   
   .link:hover {
@@ -47,7 +49,6 @@
     text-align: center;
     opacity: 0;
     animation: slideSDK 2s forwards;
-    font-smooth: always;
   }
   
   .subtext {
@@ -56,7 +57,6 @@
     text-align: center;
     opacity: 0;
     animation: fadeIn 2s forwards 2s;
-    font-smooth: always;
   }
 
   .content {
@@ -66,6 +66,7 @@
     width: 100%;
     margin-top: 20px;
     position: relative;
+    flex-grow: 1; /* Allow content to expand */
   }
 
   .left-content,
@@ -95,6 +96,29 @@
     font-size: 20px;
     text-align: center;
     margin-top: 30px;
+  }
+
+  .bottom-bar {
+    background-color: #000000;
+    height: 67.5px; /* Half the height of the top bar */
+    flex-shrink: 0; /* Ensure it doesn't shrink */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start of the bar */
+    padding: 0 10px; /* Add padding for the image */
+  }
+
+  .bottom-bar img {
+    width: 20px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+  }
+
+  .copyright {
+    font-size: 14px;
+    color: white;
+    font-weight: lighter;
+    margin-right: 5px; /* Space between text and icon */
   }
 
   @keyframes slideSDK {
@@ -161,7 +185,7 @@
     <a href="https://github.com/TryAngle-Software" class="link" target="_blank">Organization</a>
   </div>
   <div class="sdk-text">Evoke SDK</div>
-  <div class="subtext">Number 1# upcoming game engine for developers</div>
+  <div class="subtext">#1 upcoming game engine for developers</div>
   <div class="content">
     <div class="left-content">
       <div class="text">top end graphics</div>
@@ -174,6 +198,11 @@
   </div>
   <div class="learn-more">
     <a href="documentation.html" class="link" target="_blank">Learn more at our documentation</a>
+  </div>
+  <div class="bottom-bar">
+    <img src="organisation.png" alt="Organization Logo">
+    <span class="copyright">TryAngle Studios &copy;</span>
+    <a href="https://x.com/EvokeSDK" target="_blank"><img src="twitter.png" alt="Twitter Icon"></a>
   </div>
 </body>
 </html>
