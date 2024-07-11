@@ -44,32 +44,25 @@
             margin-bottom: 20px;
         }
         th, td {
-            padding: 8px; /* Reduced padding */
+            padding: 12px;
             text-align: left;
             border-bottom: 1px solid #ddd;
-            font-size: 0.9em; /* Smaller font size */
-            white-space: nowrap; /* Prevent line breaks */
         }
         th {
-            background-color: #f2f2f2;
+            background-color: rgba(242, 242, 242, 0); /* Fully transparent background */
         }
         .btn {
             display: inline-block;
-            padding: 6px 10px; /* Reduced padding */
+            padding: 8px 12px;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color .3s ease;
-            background-color: #007bff; /* Blue button by default */
+            background-color: #28a745; /* Green button by default */
+            border: none;
         }
         .btn:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-        .latest-release .btn {
-            background-color: #ffc107; /* Yellow button for latest releases */
-        }
-        .latest-release .btn:hover {
-            background-color: #ffb400; /* Darken yellow on hover */
+            background-color: #218838; /* Darker green on hover */
         }
         .unstable .btn {
             background-color: #dc3545; /* Red button for unstable versions */
@@ -85,6 +78,15 @@
             text-decoration: underline;
         }
 
+        /* Transparent OS labels */
+        .os-label {
+            background-color: transparent;
+            border-radius: 5px;
+            padding: 8px 12px;
+            color: #333;
+            font-weight: bold;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             body {
@@ -94,10 +96,10 @@
                 font-size: 2em;
             }
             table {
-                font-size: 0.8em; /* Smaller font size */
+                font-size: 0.9em;
             }
             .btn {
-                padding: 4px 8px; /* Further reduced padding */
+                padding: 6px 10px;
             }
         }
 
@@ -162,7 +164,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="latest-release">
+            <tr>
                 <td>v1.0.1</td>
                 <td><a href="#" class="changelog-link">Changelog</a></td>
                 <td><a href="#" class="btn">Download</a></td>
