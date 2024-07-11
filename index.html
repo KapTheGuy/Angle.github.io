@@ -70,13 +70,15 @@
   }
 
   .left-content,
+  .middle-content,
   .right-content {
-    width: 48%;
+    width: 30%;
     text-align: center;
     position: relative;
   }
 
   .left-content .text,
+  .middle-content .text,
   .right-content .text {
     font-size: 24px;
     font-weight: lighter;
@@ -85,13 +87,14 @@
   }
 
   .left-content img,
+  .middle-content img,
   .right-content img {
     width: 100%;
     max-width: 400px;
     display: block;
     margin: 0 auto; /* Center the image */
   }
-  .right-content
+
   .learn-more {
     font-size: 20px;
     text-align: center;
@@ -120,21 +123,7 @@
     font-weight: lighter;
     margin-right: 5px; /* Space between text and icon */
   }
-  .middle-content{
-    position:relative;
-    right: 42%;
-    top: 30px;
-  }
-
-  .textures {
-    position: relative;
-    left: 0px;
-  }
-  #texturestxt{
-    position: relative;
-    left: 0px;
-  }
-
+  
   @keyframes slideSDK {
     0% {
       transform: translateY(-50%);
@@ -180,16 +169,17 @@
     }
 
     .left-content,
+    .middle-content,
     .right-content {
       width: 90%;
       margin-top: 20px;
     }
 
     .left-content img,
+    .middle-content img,
     .right-content img {
       max-width: 300px;
     }
-    
   }
 </style>
 </head>
@@ -208,6 +198,10 @@
       <div class="text">top end graphics</div>
       <img src="Lighting.webp" alt="Top End Graphics">
     </div>
+    <div class="middle-content">
+      <div class="text">Game Preview</div>
+      <img src="rovlifepreview.webp" alt="Rov Life Preview">
+    </div>
     <div class="right-content">
       <div id="texturestxt" class="text">insane texture quality</div>
       <img class="textures" src="texture.webp" alt="Insane Texture Quality">
@@ -218,5 +212,8 @@
     <span class="copyright">TryAngle Studios &copy;</span>
     <a href="https://x.com/tryanglesoftwar" target="_blank"><img src="twitter.png" alt="Twitter Icon"></a>
   </div>
+</body>
+</html>
+
 </body>
 </html>
