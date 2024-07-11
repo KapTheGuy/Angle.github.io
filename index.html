@@ -23,10 +23,17 @@
     height: 70px;
     background: linear-gradient(to right, #000000, #888888);
     display: flex;
-    justify-content: space-around;
     align-items: center;
     padding: 0 10px;
     flex-shrink: 0; /* Ensure it doesn't shrink */
+    justify-content: space-between;
+    top: 0; /* Ensure it starts at the top */
+  }
+
+  .top-row img {
+    width: 50px; /* Increased size for the icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between icon and other items */
   }
 
   .link {
@@ -109,6 +116,7 @@
     align-items: center;
     justify-content: flex-start; /* Align items to the start of the bar */
     padding: 0 10px; /* Add padding for the image */
+    margin-top: auto; /* Push to the bottom */
   }
 
   .bottom-bar img {
@@ -185,6 +193,7 @@
 </head>
 <body>
   <div class="top-row">
+    <img src="evoke.png" alt="Evoke Logo">
     <a href="https://opensource.org/licenses/GPL" class="link" target="_blank">License</a>
     <a href="download.html" class="link" target="_blank">Downloads</a>
     <a href="https://form.jotform.com/241912762050046" class="link" target="_blank">Support</a>
@@ -200,7 +209,7 @@
     </div>
     <div class="middle-content">
       <div class="text">Game Preview</div>
-      <img src="rovlifepreview.png" alt="Rov Life Preview">
+      <img src="rovlifepreview.png" alt="Game Preview">
     </div>
     <div class="right-content">
       <div id="texturestxt" class="text">insane texture quality</div>
