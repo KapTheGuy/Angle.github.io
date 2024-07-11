@@ -20,7 +20,7 @@
   .top-row {
     position: relative;
     width: 100%;
-    height: 135px;
+    height: 70px;
     background: linear-gradient(to right, #000000, #888888);
     display: flex;
     justify-content: space-around;
@@ -91,7 +91,7 @@
     display: block;
     margin: 0 auto; /* Center the image */
   }
-
+  .right-content
   .learn-more {
     font-size: 20px;
     text-align: center;
@@ -119,6 +119,25 @@
     color: white;
     font-weight: lighter;
     margin-right: 5px; /* Space between text and icon */
+  }
+  .middle-content{
+    position:relative;
+    right: 42%;
+    top: 30px;
+  }
+
+  .textures {
+    position: relative;
+    left: 0px;
+  }
+  #texturestxt{
+    position: relative;
+    left: 0px;
+  }
+  #doclink{
+    position: relative;
+    left: 835px;
+    bottom: 25px;
   }
 
   @keyframes slideSDK {
@@ -175,7 +194,7 @@
     .right-content img {
       max-width: 300px;
     }
-
+    
   }
 </style>
 </head>
@@ -194,12 +213,12 @@
       <img src="Lighting.webp" alt="Top End Graphics">
     </div>
     <div class="right-content">
-      <div class="text">insane texture quality</div>
-      <img src="texture.webp" alt="Insane Texture Quality">
+      <div id="texturestxt" class="text">insane texture quality</div>
+      <img class="textures" src="texture.webp" alt="Insane Texture Quality">
     </div>
   </div>
   <div class="learn-more">
-    <a href="documentation.html" class="link" target="_blank">Learn more at our documentation</a>
+    <a id="doclink" href="documentation.html" class="link" target="_blank">Learn more at our documentation</a>
   </div>
   <div class="bottom-bar">
     <img class="organimg" src="organisation.png" alt="Organization Logo">
