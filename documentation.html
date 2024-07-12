@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evoke Engine Developer Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            color: #000; /* Changed text color to black for better contrast */
+            background-color: #f0f0f0; /* Lighter background color */
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #494949;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            flex-grow: 1;
+            background-color: #fff; /* Light background color for content area */
+            height: 100vh; /* Ensure content area takes full height */
+            overflow-y: auto; /* Allow scrolling if content overflows */
+        }
+        .sidebar h2 {
+            font-size: 18px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .sidebar .subtopic {
+            display: none;
+            padding-left: 20px;
+        }
+        .sidebar .subtopic li {
+            padding: 5px 0;
+        }
+        .sidebar li:hover, .sidebar li:focus {
+            background-color: #575757;
+        }
+    </style>
+    <script>
+        function toggleSubtopics() {
+            const subtopics = document.getElementById('setup-subtopics');
+            subtopics.style.display = subtopics.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Evoke Engine Developer Documentation</h2>
+        <ul>
+            <li tabindex="0" onclick="toggleSubtopics()" onkeypress="toggleSubtopics()">Setup</li>
+            <ul id="setup-subtopics" class="subtopic">
+                <li>Download</li>
+                <li>Setup</li>
+            </ul>
+            <!-- Add more topics here -->
+        </ul>
+    </div>
+    <div class="content">
+        <h2 id="download">Download</h2>
+        <p>Instructions on how to download the Evoke Engine.</p>
+        
+        <h2 id="setup">Setup</h2>
+        <p>Instructions on how to set up the Evoke Engine.</p>
+        
+        <!-- Add more content sections here -->
+    </div>
+</body>
+</html>
