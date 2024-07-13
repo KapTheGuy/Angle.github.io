@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evoke</title>
 <style>
-  body {
+  html, body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     background: linear-gradient(135deg, #c90c43, #fbb03b);
     color: white;
     font-family: Arial, sans-serif;
@@ -25,15 +28,15 @@
     display: flex;
     align-items: center;
     padding: 0 10px;
-    flex-shrink: 0; /* Ensure it doesn't shrink */
+    flex-shrink: 0;
     justify-content: space-between;
-    top: 0; /* Ensure it starts at the top */
+    top: 0;
   }
 
   .top-row img {
-    width: 50px; /* Increased size for the icon */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between icon and other items */
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
   }
 
   .link {
@@ -43,7 +46,7 @@
     font-weight: lighter;
     cursor: pointer;
     opacity: 1;
-    margin-right: 100px; /* Increased margin for spacing */
+    margin-right: 100px;
   }
   
   .link:hover {
@@ -74,8 +77,8 @@
     width: 100%;
     margin-top: 20px;
     position: relative;
-    flex-grow: 1; /* Allow content to expand */
-    overflow-y: auto; /* Add vertical scrolling */
+    flex-grow: 1;
+    overflow-y: auto;
   }
 
   .left-content,
@@ -92,7 +95,7 @@
     font-size: 24px;
     font-weight: lighter;
     text-align: center;
-    margin-bottom: 20px; /* Position the text 20 pixels above the image */
+    margin-bottom: 20px;
   }
 
   .left-content img,
@@ -101,23 +104,23 @@
     width: 100%;
     max-width: 400px;
     display: block;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
   }
 
   .bottom-bar {
     background: linear-gradient(to left, #494949, #333333);
-    height: 67.5px; /* Half the height of the top bar */
-    flex-shrink: 0; /* Ensure it doesn't shrink */
+    height: 67.5px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the start of the bar */
-    padding: 0 10px; /* Add padding for the image */
-    margin-top: auto; /* Push to the bottom */
+    justify-content: flex-start;
+    padding: 0 10px;
+    margin-top: auto;
   }
 
   .bottom-bar img {
-    width: 20px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 20px;
+    height: auto;
     cursor: pointer;
   }
 
@@ -125,7 +128,7 @@
     font-size: 14px;
     color: white;
     font-weight: lighter;
-    margin-right: 5px; /* Space between text and icon */
+    margin-right: 5px;
   }
 
   .organimg {
@@ -169,7 +172,7 @@
 
     .link {
       font-size: 14px;
-      margin-right: 5px; /* Adjust for smaller screens */
+      margin-right: 5px;
     }
     
     .top-row {
@@ -181,7 +184,7 @@
       flex-direction: column;
       align-items: center;
       z-index: 1;
-      overflow-y: auto; /* Add vertical scrolling */
+      overflow-y: auto;
     }
 
     .left-content,
@@ -197,7 +200,6 @@
       max-width: 300px;
     }
 
-    /* Customize scrollbar for mobile */
     .content::-webkit-scrollbar {
       width: 8px;
     }
