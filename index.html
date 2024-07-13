@@ -75,6 +75,7 @@
     margin-top: 20px;
     position: relative;
     flex-grow: 1; /* Allow content to expand */
+    overflow-y: auto; /* Add vertical scrolling */
   }
 
   .left-content,
@@ -180,6 +181,7 @@
       flex-direction: column;
       align-items: center;
       z-index: 1;
+      overflow-y: auto; /* Add vertical scrolling */
     }
 
     .left-content,
@@ -193,6 +195,17 @@
     .middle-content img,
     .right-content img {
       max-width: 300px;
+    }
+
+    /* Customize scrollbar for mobile */
+    .content::-webkit-scrollbar {
+      width: 8px;
+    }
+    .content::-webkit-scrollbar-track {
+      background: #333333;
+    }
+    .content::-webkit-scrollbar-thumb {
+      background: #888888;
     }
   }
 </style>
